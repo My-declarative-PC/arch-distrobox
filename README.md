@@ -1,9 +1,9 @@
-# Fedora image: turbo-spoon
-A custom image based on Fedora Silverblue, designed for my personal use case. \
+# Arch image: turbo-spoon
+A custom image based on Arch, designed for my personal use case. \
 Feel free to give it a try though. :)
  
 To pull this image use:
  
-`sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/my-declarative-pc/silverblue-setup__sway-main:latest`
+`distrobox create -i ghcr.io/My-declarative-PC/arch-distrobox:latest -n work`
  
-Heavily inspired by [uBlue](https://github.com/ublue-os/base).
+Heavily inspired by [arch-distrobox](https://github.com/ublue-os/arch-distrobox).

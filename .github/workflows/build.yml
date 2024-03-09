@@ -1,4 +1,4 @@
-name: Build
+name: Build Arch-Distrobox
 on:
   workflow_dispatch:
     inputs:
@@ -23,18 +23,17 @@ on:
     - cron: "21 21 * * *"
   push:
     branches:
-      - main
-      - sway-main
+      - master
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: "silverblue-setup__${{ github.ref_name }}"
+  IMAGE_NAME: "arch-distrobox__${{ github.ref_name }}"
   IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
   REGISTRY_USER: ${{ github.actor }}
   REGISTRY_PASSWORD: ${{ github.token }}
 
 jobs:
-  build_silverblue:
+  build_arch:
     runs-on: ubuntu-latest
     permissions:
       contents: read

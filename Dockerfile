@@ -10,7 +10,7 @@ RUN pacman -Syu --noconfirm && \
 USER build
 WORKDIR /home/build
 
-RUN paru -Syu --noconfirm
+# RUN paru -Syu --noconfirm
 
 RUN paru -S bash-language-server --noconfirm
 RUN paru -S bat --noconfirm

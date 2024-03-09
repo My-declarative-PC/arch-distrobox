@@ -24,6 +24,7 @@ RUN paru -S \
     lazygit \
     ripgrep \
     sd \
+    starship \
     yazi \
     zoxide \
      --noconfirm

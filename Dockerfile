@@ -9,25 +9,24 @@ RUN pacman -Syu --noconfirm && \
 
 USER build
 WORKDIR /home/build
-
-# RUN paru -Syu --noconfirm
-
-RUN paru -S bash-language-server --noconfirm
-RUN paru -S bat --noconfirm
-RUN paru -S dust --noconfirm
-RUN paru -S eza --noconfirm
-RUN paru -S fd --noconfirm
-RUN paru -S fish --noconfirm
-RUN paru -S fzf --noconfirm
-RUN paru -S git --noconfirm
-RUN paru -S git-delta --noconfirm
-RUN paru -S helix --noconfirm
-RUN paru -S helixbinhx --noconfirm
-RUN paru -S lazygit --noconfirm
-RUN paru -S ripgrep --noconfirm
-RUN paru -S sd --noconfirm
-RUN paru -S yazi --noconfirm
-RUN paru -S zoxide --noconfirm
+RUN paru -S \
+    bash-language-server \
+    bat \
+    dust \
+    eza \
+    fd \
+    fish \
+    fzf \
+    git \
+    git-delta \
+    helix \
+    helixbinhx \
+    lazygit \
+    ripgrep \
+    sd \
+    yazi \
+    zoxide \
+     --noconfirm
 
 USER root
 WORKDIR /

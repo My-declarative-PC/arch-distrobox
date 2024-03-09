@@ -2,10 +2,7 @@ FROM ghcr.io/ublue-os/arch-distrobox AS arch-distrobox
 
 # Pacman Initialization
 # Create build user
-RUN sed -i 's/#Color/Color/g' /etc/pacman.conf && \
-    printf "[multilib]\nInclude = /etc/pacman.d/mirrorlist\n" | tee -a /etc/pacman.conf && \
-    sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/g' /etc/makepkg.conf && \
-    pacman -Syu --noconfirm && \
+RUN pacman -Syu --noconfirm && \
     useradd -m --shell=/bin/bash build && usermod -L build && \
     echo "build ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
     echo "root ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers

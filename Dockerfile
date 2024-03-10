@@ -14,6 +14,7 @@ RUN paru -S \
     bat \
     dust \
     eza \
+    fastfetch \
     fd \
     fish \
     fzf \

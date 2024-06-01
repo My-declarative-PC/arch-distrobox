@@ -12,6 +12,7 @@ WORKDIR /home/build
 RUN paru -S \
     bash-language-server \
     bat \
+    btop \
     dust \
     eza \
     fastfetch \

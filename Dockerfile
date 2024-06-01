@@ -29,6 +29,7 @@ RUN paru -S \
     starship \
     yazi \
     zoxide \
+    zellij \
      --noconfirm
 
 USER root

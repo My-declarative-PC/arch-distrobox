@@ -72,6 +72,7 @@ jobs:
         with:
           image: ${{ env.IMAGE_NAME }}
           tags: "latest"
+          platforms: linux/amd64,linux/arm64
           registry: ${{ steps.registry_case.outputs.lowercase }}
           username: ${{ env.REGISTRY_USER }}
           password: ${{ env.REGISTRY_PASSWORD }}

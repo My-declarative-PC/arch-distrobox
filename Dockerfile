@@ -1,10 +1,13 @@
 FROM quay.io/toolbx-images/alpine-toolbox:edge as base
 
-RUN apk update
-RUN apk add --upgrade apk-tools
-RUN apk upgrade --available
-RUN apk add --no-cache \
+RUN apk update && \
+    apk upgrade && \
+    apk add --no-cache \
         helix
+
+RUN ln -fs /bin/sh /usr/bin/sh && \
+    ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker
+
 
 # FROM ghcr.io/ublue-os/arch-distrobox AS arch-distrobox
 

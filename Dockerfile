@@ -1,9 +1,9 @@
 FROM quay.io/toolbx-images/alpine-toolbox:edge as base
 
-RUN apk update && \
-    apk add --upgrade apk-tools && \
-    apk upgrade --available && \
-    apk add --no-cache \
+RUN apk update
+RUN apk add --upgrade apk-tools
+RUN apk upgrade --available
+RUN apk add --no-cache \
         helix
 
 # FROM ghcr.io/ublue-os/arch-distrobox AS arch-distrobox

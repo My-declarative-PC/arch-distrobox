@@ -2,8 +2,7 @@ FROM quay.io/toolbx-images/alpine-toolbox:edge as base
 
 RUN apk update && \
     apk upgrade && \
-    apk add --no-cache \
-        helix
+    apk add helix
 
 RUN ln -fs /bin/sh /usr/bin/sh && \
     ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker

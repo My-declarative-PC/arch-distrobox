@@ -57,7 +57,7 @@ jobs:
       - name: Build container image
         uses: redhat-actions/buildah-build@v2
         with:
-          platforms: linux/amd64
+          platforms: linux/arm64
           context: "."
           containerfiles: Dockerfile
           image: ${{ env.IMAGE_NAME }}
